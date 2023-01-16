@@ -1,12 +1,12 @@
 import java.util.Map;
-
+                                                        //разделили два разных объекта покупка и корзина корзину вынесли в отдельный класс
 public class Basket {
     protected Purchase[] purchases;
     protected Map<String, Integer> prices;
 
     public Basket(Map<String, Integer> prices) {
         this.prices = prices;
-        this.purchases = new Purchase[prices.size()];
+        this.purchases = new Purchase[prices.size()]; //утсранение магического числа "4"
     }
 
     public void addPurchase(String title, int count) {
